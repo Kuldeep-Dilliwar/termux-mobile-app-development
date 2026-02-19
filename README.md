@@ -9,7 +9,7 @@ pkg update -y && pkg upgrade
 ```
 pkg install aapt apksigner build-essential lld android-tools sqlite git tree which wget curl git openjdk-17 kotlin gradle binutils build-essential fzf aidl lld d8 aapt2
 ```
-## To install android sdk version 34:
+## To install android sdk version 34 (termux official bins only supports for sdk 34):
 ```
 mkdir -p ~/android-sdk/licenses
 
@@ -28,14 +28,10 @@ yes | pkg update && yes | pkg i nodejs && clear && \
 yes | GYP_DEFINES="android_ndk_path=$PREFIX" npm install -g @google/gemini-cli --ignore-scripts && clear && \
 gemini
 ```
-## Pointing to aarch64 bin for aapt2
+## Pointing to aarch64 bin for aapt2 & Pointing to android sdk folder:
 ```
-echo "android.useAndroidX=true"                                                  > gradle.properties
-echo "android.aapt2FromMavenOverride=/data/data/com.termux/files/usr/bin/aapt2" >> gradle.properties
-```
-## Pointing to android sdk folder:
-```
-echo "sdk.dir=/data/data/com.termux/files/home/android-sdk" > local.properties
+echo "android.aapt2FromMavenOverride=/data/data/com.termux/files/usr/bin/aapt2"  > gradle.properties
+echo "sdk.dir=/data/data/com.termux/files/home/android-sdk"                      > local.properties
 ```
 ## Triking gradle to install android sdk autometically. We will get error first time (gradle will see the licences and download the android sdk 34 autometically):
 ```
