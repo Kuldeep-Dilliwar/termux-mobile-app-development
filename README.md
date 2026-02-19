@@ -7,7 +7,7 @@ pkg update -y && pkg upgrade
 ```
 ## Installing termux dependencies:
 ```
-pkg install aapt apksigner build-essential lld android-tools sqlite git tree which wget curl git openjdk-17 kotlin gradle binutils build-essential fzf aidl lld
+pkg install aapt apksigner build-essential lld android-tools sqlite git tree which wget curl git openjdk-17 kotlin gradle binutils build-essential fzf aidl lld d8 aapt2
 ```
 ## To install android sdk version 34:
 ```
