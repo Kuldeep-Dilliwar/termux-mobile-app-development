@@ -31,7 +31,7 @@ gemini
 ## Pointing to aarch64 bin for aapt2 & Pointing to android sdk folder:
 ```
 echo "android.aapt2FromMavenOverride=/data/data/com.termux/files/usr/bin/aapt2" >> gradle.properties
-echo "sdk.dir=/data/data/com.termux/files/home/android-sdk"                      > local.properties
+echo "sdk.dir=/data/data/com.termux/files/home/android-sdk"                     >> local.properties
 ```
 ## Triking gradle to install android sdk autometically. We will get error first time (gradle will see the licences and download the android sdk 34 autometically):
 ```
