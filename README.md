@@ -17,7 +17,12 @@ echo "8933bad161af4178b1185d1a37fbf41ea5269c55" >  ~/android-sdk/licenses/androi
 echo "d56f5187479451eabf01fb78af6dfcb131a6481e" >> ~/android-sdk/licenses/android-sdk-license
 echo "24333f8a63b6825ea9c5514f83c2829b004d1fee" >> ~/android-sdk/licenses/android-sdk-license
 ```
-## Use Gemini to write hello world android apk code:
+## Clone the repo:
+```
+git clone https://github.com/Kuldeep-Dilliwar/bare-minimum-android-app.git
+cd bare-minimum-android-app
+```
+## (Skip) Or Use Gemini to write hello world android apk code:
 ```
 yes | pkg update && yes | pkg i nodejs && clear && \
 yes | GYP_DEFINES="android_ndk_path=$PREFIX" npm install -g @google/gemini-cli --ignore-scripts && clear && \
@@ -77,7 +82,7 @@ mobilize_tool "$PLATFORM_TOOLS" "adb"
 mobilize_tool "$PLATFORM_TOOLS" "fastboot"
 mobilize_tool "$PLATFORM_TOOLS" "sqlite3"
 ```
-## Checking the symlinks:
+## (Skip) Checking the symlinks:
 ```
 find ~/android-sdk \
     \( -type f -executable -o -name "*.so" -o -type l \) \
